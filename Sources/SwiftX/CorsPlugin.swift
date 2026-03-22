@@ -14,7 +14,7 @@ public class CorsPlugin: SwiftXPlugin, @unchecked Sendable {
     
     public func boot(app: SwiftXApp) {
         // Intercept all responses to add CORS headers
-        app.onResponse { res in
+        app.onResponse { (res: inout Res) in
             var h = res.headers
             h["Access-Control-Allow-Origin"] = self.allowOrigin
             h["Access-Control-Allow-Methods"] = self.allowMethods

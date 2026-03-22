@@ -33,7 +33,8 @@ let package = Package(
                 "SwiftX",
                 .product(name: "Logging", package: "swift-log")
             ],
-            path: "examples/FullShowcase"
+            path: "examples/FullShowcase",
+            exclude: ["README.md"]
         ),
         .testTarget(
             name: "swiftxTests",

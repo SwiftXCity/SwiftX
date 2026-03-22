@@ -11,6 +11,7 @@ import Darwin
 
 // MARK: - Route Handler Definition
 public typealias RouteHandler = @Sendable (Req, Context) -> Res
+public typealias SwiftX = SwiftXApp
 
 // MARK: - Route Definition
 private struct RouteDefinition {
@@ -23,6 +24,7 @@ private struct RouteDefinition {
 public final class SwiftXApp: @unchecked Sendable {
     private var routes: [RouteDefinition] = []
     private var middlewares: [@Sendable (Req, Context) -> Bool] = []
+    private var responseInterceptors: [@Sendable (inout Res) -> Void] = []
     private var plugins: [SwiftXPlugin] = []
     private var core: SwiftXCore?
     private var isDevelopment: Bool = false
@@ -106,6 +108,10 @@ public final class SwiftXApp: @unchecked Sendable {
         plugins.append(plugin)
     }
 
+    public func onResponse(_ interceptor: @escaping @Sendable (inout Res) -> Void) {
+        responseInterceptors.append(interceptor)
+    }
+
     // MARK: - Lifecycle
     public func start(port: Int = 8080, threads: Int = ProcessInfo.processInfo.processorCount, development: Bool = false) {
         self.isDevelopment = development
@@ -143,7 +149,13 @@ public final class SwiftXApp: @unchecked Sendable {
                 let ctx = Context(coreCtx: cCtx, showLogs: self.isDevelopment)
 
                 let start = Date()
-                let result = rDef.handler(req, ctx)
+                var result = rDef.handler(req, ctx)
+                
+                // Execute response interceptors
+                for interceptor in self.responseInterceptors {
+                    interceptor(&result)
+                }
+                
                 let end = Date()
 
                 if self.isDevelopment {

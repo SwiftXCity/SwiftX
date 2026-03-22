@@ -2,9 +2,9 @@ import SwiftXCore
 import Foundation
 
 public enum Res: @unchecked Sendable {
-    case text(String, headers: [String: String] = [:])
-    case json([String: Any], headers: [String: String] = [:])
-    case html(String, headers: [String: String] = [:])
+    case text(String, headers: [String: String])
+    case json([String: Any], headers: [String: String])
+    case html(String, headers: [String: String])
 
     public var headers: [String: String] {
         get {
