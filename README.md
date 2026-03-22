@@ -4,7 +4,8 @@
 [HomePage](https://swiftxdocs.vercel.app/)
 [Docs](https://swiftxdocs.vercel.app/docs)
 
-
+![Platforms](https://img.shields.io/badge/Platforms-macOS%20%7C%20Linux%20%7C%20Windows-blue)
+![Swift](https://img.shields.io/badge/Swift-6.2%20%7C%206.1%20%7C%206.0-orange)
 
 Quick Start
 
