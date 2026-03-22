@@ -1,0 +1,24 @@
+{
+  "originHash" : "7e2e8cfa75dbd4dd784b766774d7dd26279c66a267c974839ce67b9d747dd201",
+  "pins" : [
+    {
+      "identity" : "swift-log",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-log.git",
+      "state" : {
+        "revision" : "bbd81b6725ae874c69e9b8c8804d462356b55523",
+        "version" : "1.10.1"
+      }
+    },
+    {
+      "identity" : "swiftxcore",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwiftXCity/SwiftXCore.git",
+      "state" : {
+        "revision" : "cf22e264ff38e2cbc1c2efd51c99f678c4dfb412",
+        "version" : "1.1.0"
+      }
+    }
+  ],
+  "version" : 3
+}
