@@ -4,8 +4,9 @@
 [HomePage](https://swiftxdocs.vercel.app/)
 [Docs](https://swiftxdocs.vercel.app/docs)
 
-![Platforms](https://img.shields.io/badge/Platforms-macOS%20%7C%20Linux%20%7C%20Windows-blue)
-![Swift](https://img.shields.io/badge/Swift-6.2%20%7C%206.1%20%7C%206.0-orange)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FSwiftXCity%2FSwiftXCore%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/SwiftXCity/SwiftXCore)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FSwiftXCity%2FSwiftXCore%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/SwiftXCity/SwiftXCore)
+
 
 Quick Start
 
