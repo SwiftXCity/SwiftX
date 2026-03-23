@@ -71,4 +71,4 @@ Your server should now be running at `http://localhost:5100`.
 
 Next Steps 
 
-Explore the [Routing](https://swiftxdocs.vercel.app/docs/routing) documentation to learn more about defining routes and handling requests.
+Explore the [Runtime Apis](https://swiftxdocs.vercel.app/docs/routing](https://swiftxdocs.vercel.app/docs/runtime-api)) documentation to learn more about defining routes and handling requests.
